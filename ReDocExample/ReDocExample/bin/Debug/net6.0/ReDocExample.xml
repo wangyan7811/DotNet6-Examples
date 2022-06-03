@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReDocExample</name>
+    </assembly>
+    <members>
+        <member name="M:ReDocExample.Controllers.WeatherForecastController.Get">
+            <summary>
+            天气查询接口
+            </summary>
+            <remarks>天气情况接口详细描述，巴拉巴拉</remarks>
+            <returns></returns>
+        </member>
+        <member name="P:ReDocExample.WeatherForecast.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:ReDocExample.WeatherForecast.TemperatureC">
+            <summary>
+            摄氏度
+            </summary>
+        </member>
+        <member name="P:ReDocExample.WeatherForecast.TemperatureF">
+            <summary>
+            华氏度
+            </summary>
+        </member>
+    </members>
+</doc>

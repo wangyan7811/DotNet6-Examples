@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repos\\DotNet6-Examples\\DotNET6Example\\DotNET6Example\\DotNET6Example.csproj": {}
+    "C:\\Repos\\DotNet6-Examples\\ReDocExample\\ReDocExample\\ReDocExample.csproj": {}
   },
   "projects": {
-    "C:\\Repos\\DotNet6-Examples\\DotNET6Example\\DotNET6Example\\DotNET6Example.csproj": {
+    "C:\\Repos\\DotNet6-Examples\\ReDocExample\\ReDocExample\\ReDocExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repos\\DotNet6-Examples\\DotNET6Example\\DotNET6Example\\DotNET6Example.csproj",
-        "projectName": "DotNET6Example",
-        "projectPath": "C:\\Repos\\DotNet6-Examples\\DotNET6Example\\DotNET6Example\\DotNET6Example.csproj",
+        "projectUniqueName": "C:\\Repos\\DotNet6-Examples\\ReDocExample\\ReDocExample\\ReDocExample.csproj",
+        "projectName": "ReDocExample",
+        "projectPath": "C:\\Repos\\DotNet6-Examples\\ReDocExample\\ReDocExample\\ReDocExample.csproj",
         "packagesPath": "C:\\Users\\hailong.wu1\\.nuget\\packages\\",
-        "outputPath": "C:\\Repos\\DotNet6-Examples\\DotNET6Example\\DotNET6Example\\obj\\",
+        "outputPath": "C:\\Repos\\DotNet6-Examples\\ReDocExample\\ReDocExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Figgle": {
+            "Microsoft.Extensions.PlatformAbstractions": {
               "target": "Package",
-              "version": "[0.4.0, )"
+              "version": "[1.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -61,6 +65,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

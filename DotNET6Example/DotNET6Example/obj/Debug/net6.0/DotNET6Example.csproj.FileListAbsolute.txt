@@ -1,0 +1,17 @@
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\DotNET6Example.exe
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\DotNET6Example.deps.json
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\DotNET6Example.runtimeconfig.json
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\DotNET6Example.dll
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\DotNET6Example.pdb
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\bin\Debug\net6.0\Figgle.dll
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.csproj.AssemblyReference.cache
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.AssemblyInfoInputs.cache
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.AssemblyInfo.cs
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.csproj.CoreCompileInputs.cache
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.csproj.CopyComplete
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.dll
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\refint\DotNET6Example.dll
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.pdb
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\DotNET6Example.genruntimeconfig.cache
+C:\Repos\DotNet6-Examples\DotNET6Example\DotNET6Example\obj\Debug\net6.0\ref\DotNET6Example.dll
