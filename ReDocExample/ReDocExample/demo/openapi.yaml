@@ -1,0 +1,92 @@
+openapi: 3.0.1
+info:
+  title: 天气查询说明
+  version: v2
+paths:
+  /WeatherForecast:
+    get:
+      tags:
+        - WeatherForecast
+      summary: 天气查询接口
+      description: 天气情况接口详细描述，巴拉巴拉
+      operationId: 天气查询接口
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WeatherForecast'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WeatherForecast'
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/WeatherForecast'
+        '401':
+          description: Unauthorized
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Error'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: 状态码
+          format: int32
+        success:
+          type: boolean
+          description: 操作是否成功
+        msg:
+          type: string
+          description: 返回信息
+          nullable: true
+      additionalProperties: false
+    WeatherForecast:
+      type: object
+      properties:
+        date:
+          type: string
+          description: 日期
+          format: date-time
+        temperatureC:
+          type: integer
+          description: 摄氏度
+          format: int32
+        temperatureF:
+          type: integer
+          description: 华氏度
+          format: int32
+          readOnly: true
+        summary:
+          type: string
+          nullable: true
+      additionalProperties: false

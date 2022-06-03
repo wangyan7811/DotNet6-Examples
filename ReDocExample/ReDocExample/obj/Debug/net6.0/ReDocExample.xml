@@ -11,6 +11,21 @@
             <remarks>天气情况接口详细描述，巴拉巴拉</remarks>
             <returns></returns>
         </member>
+        <member name="P:ReDocExample.Error.status">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:ReDocExample.Error.success">
+            <summary>
+            操作是否成功
+            </summary>
+        </member>
+        <member name="P:ReDocExample.Error.msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
         <member name="P:ReDocExample.WeatherForecast.Date">
             <summary>
             日期

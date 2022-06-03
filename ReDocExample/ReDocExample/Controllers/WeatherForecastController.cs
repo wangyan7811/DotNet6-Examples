@@ -26,8 +26,8 @@ namespace ReDocExample.Controllers
         /// <returns></returns>
         [HttpGet(Name = "天气查询接口")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(IEnumerable<WeatherForecast>))]
-        [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.Unauthorized,Type = typeof(Error))]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError, Type = typeof(Error))]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
