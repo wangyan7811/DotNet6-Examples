@@ -38,3 +38,5 @@ app.Run();
 ```
 
 - 浏览 https://localhost:7160/StaticFiles/ ，返回文件列表
+## Examples
+https://github.com/huzuohuyou/DotNet6-Examples/tree/main/UseStaticFiles
