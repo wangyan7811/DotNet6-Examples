@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadWriteAppSettingsJson", "ReadWriteAppSettingsJson\ReadWriteAppSettingsJson.csproj", "{6DC48D26-FF99-4534-9BA5-38C3036D316B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadWriteAppSettingsJsonTests", "ReadWriteAppSettingsJsonTests\ReadWriteAppSettingsJsonTests.csproj", "{8351BE5E-A965-4AD6-B30D-5BE93F04F45C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DC48D26-FF99-4534-9BA5-38C3036D316B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC48D26-FF99-4534-9BA5-38C3036D316B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC48D26-FF99-4534-9BA5-38C3036D316B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC48D26-FF99-4534-9BA5-38C3036D316B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8351BE5E-A965-4AD6-B30D-5BE93F04F45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8351BE5E-A965-4AD6-B30D-5BE93F04F45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8351BE5E-A965-4AD6-B30D-5BE93F04F45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8351BE5E-A965-4AD6-B30D-5BE93F04F45C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {602EC82E-6A95-4812-8D00-C1005D6632F3}
+	EndGlobalSection
+EndGlobal

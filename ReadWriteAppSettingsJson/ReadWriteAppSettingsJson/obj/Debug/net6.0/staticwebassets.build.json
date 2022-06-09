@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "je87nAOFIfLKb5kuXiKXbYeQd5bBivKUp4c8eOe8VyY=",
+  "Source": "ReadWriteAppSettingsJson",
+  "BasePath": "_content/ReadWriteAppSettingsJson",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
