@@ -1,6 +1,10 @@
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
@@ -16,8 +20,11 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseStaticFiles();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseFileServer(new FileServerOptions
 {
@@ -27,6 +34,18 @@ app.UseFileServer(new FileServerOptions
     EnableDirectoryBrowsing = true
 });
 
+
+// Set up custom content types - associating file extension to MIME type
+var provider = new FileExtensionContentTypeProvider();
+// Add new mappings
+provider.Mappings[".cfg"] = "application/x-msdownload";
+provider.Mappings[".dat"] = "application/x-msdownload";
+
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider
+});
 app.UseAuthorization();
 
 app.MapDefaultControllerRoute();
