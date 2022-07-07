@@ -66,4 +66,4 @@ class MyLogger : ILogger
 
 可以看到对执行程序做了执行时间记录
 
-![](.\Images\1.png)
+![](Images\1.png)
