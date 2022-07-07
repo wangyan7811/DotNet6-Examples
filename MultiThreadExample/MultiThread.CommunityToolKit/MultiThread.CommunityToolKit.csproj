@@ -14,7 +14,7 @@
 	  <Company>personal</Company>
 	  <!--生成自动构建-->
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <PackageProjectUrl>https://github.com/huzuohuyou/DotNet6-Examples.git</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/huzuohuyou/DotNet6-Examples/tree/main/MultiThreadExample/MultiThread.CommunityToolKit</PackageProjectUrl>
 	  <Description>
 		  快速多线程处理列表工具包、
 	  </Description>

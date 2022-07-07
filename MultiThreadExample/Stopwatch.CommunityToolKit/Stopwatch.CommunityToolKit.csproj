@@ -14,7 +14,7 @@
 	  <Company>personal</Company>
 	  <!--生成自动构建-->
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <PackageProjectUrl>https://github.com/huzuohuyou/DotNet6-Examples.git</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/huzuohuyou/DotNet6-Examples/tree/main/MultiThreadExample/Stopwatch.CommunityToolKit</PackageProjectUrl>
 	  <Description>
 		  方法执行时间记录社区工具包
 	  </Description>
