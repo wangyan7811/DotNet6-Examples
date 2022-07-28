@@ -136,7 +136,7 @@ namespace WebHMIWaveformAPISample.Controllers
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
                     var content = await httpResponseMessage.Content.ReadAsStringAsync();
-                    Regex re = new Regex("(?<txt>(?<=Anti-Forgery-Token\": \").+(?=\"))");
+                    Regex re = new Regex("(?<txt>(?<=antiForgeryToken=').+(?=';))");
                     var match = re.Match(content);
                     if (match.Success)
                         _token = match.Value;
