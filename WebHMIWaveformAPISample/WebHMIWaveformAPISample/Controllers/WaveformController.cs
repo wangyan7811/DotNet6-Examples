@@ -257,6 +257,62 @@ namespace WebHMIWaveformAPISample.Controllers
         }
 
         [HttpGet]
+        [Route("WaveformAPI")]
+        public async Task WaveformAPI()
+        {
+            try
+            {
+                var httpRequestMessage = new HttpRequestMessage(
+                    HttpMethod.Post,
+                    $@"https://{_host}/PsoDataService/WaveformData/Bundle")
+                {
+                    Headers =
+                    {
+                        //{ HeaderNames.Accept, "*/*" },
+                        //{ HeaderNames.Connection, "keep-alive" },
+                        //{ HeaderNames.AcceptEncoding, "gzip, deflate, br" },
+                        //{ HeaderNames.AcceptLanguage, "zh-CN" },
+                        { HeaderNames.Cookie, _cookie },
+                        { "anti-forgery-token", _token },
+                        //{ HeaderNames.UserAgent, "ApiPOST Runtime" }
+                    }
+                    ,
+                    Content = new StringContent(@"{
+  ""LookupType"": ""alarmid"",
+                    ""Ids"": [
+                    ""PLSDCluster.S6K_CD_CPL_A51_PTOC4_Op_dchg_637943959837810000""
+                    ],
+                    ""IncludeWaveformData"": true,
+                    ""PageSize"": 0,
+                    ""PageNumber"": 0
+                }",
+                Encoding.UTF8,
+                MediaTypeNames.Application.Json)
+                };
+                var handler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = delegate { return true; },
+                    AutomaticDecompression = DecompressionMethods.GZip
+                };
+                var httpClient = new HttpClient(handler);
+                var httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
+
+                if (httpResponseMessage.IsSuccessStatusCode)
+                {
+                    var content = await httpResponseMessage.Content.ReadAsStringAsync();
+
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+
+        [HttpGet]
         [Route("WebHMILogin")]
         public async Task WebHMILogin()
         {
