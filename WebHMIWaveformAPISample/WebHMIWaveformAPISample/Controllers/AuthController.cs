@@ -16,9 +16,7 @@ namespace WebHMIWaveformAPISample.Controllers
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly PowerManagerClient _powerManagerClient;
         private readonly TokenAndCookieService _tokenAndCookieService;
-        private readonly string _host = "10.10.1.225";
-        //private static string _token = string.Empty;
-        //private static string _cookie = string.Empty;
+
         private static HttpClient _httpClient;
         public AuthController(IHttpClientFactory httpClientFactory, PowerManagerClient powerManagerClient, TokenAndCookieService tokenAndCookieService)
         {
@@ -35,7 +33,7 @@ namespace WebHMIWaveformAPISample.Controllers
             {
                 var httpRequestMessage = new HttpRequestMessage(
                     HttpMethod.Get,
-                    $@"https://{_host}/WebHmi/Auth?ReturnUrl=%2fWebHmi%2f%23HmiApplication%2f%23lib%2fiec5foverview2etgml")
+                    $@"https://{_tokenAndCookieService.Host}/WebHmi/Auth?ReturnUrl=%2fWebHmi%2f%23Alarms")
                 {
                     Headers =
                 {
@@ -78,22 +76,22 @@ namespace WebHMIWaveformAPISample.Controllers
                 CookieContainer = new CookieContainer()
             };
             _httpClient = new HttpClient(handler);
-
-            var todoItemJson = new StringContent(
-                @"
-                {
-	            ""userName"": ""admin"",
-                ""password"": ""admin"",
+            var str = string.Format(@"
+                {{
+	            ""userName"": ""{0}"",
+                ""password"": ""{1}"",
                 ""returnUrl"": "" / WebHmi/#Alarms"",
                 ""setAuthCookie"": true
-                }
-                ",
+                }}
+                ", _tokenAndCookieService.User, _tokenAndCookieService.Password);
+            var todoItemJson = new StringContent(
+                str,
                 Encoding.UTF8,
                 MediaTypeNames.Application.Json);
             _httpClient.DefaultRequestHeaders.Add("anti-forgery-token", _tokenAndCookieService.Token);
-            var httpResponseMessage = await _httpClient.PostAsync($@"https://{_host}/PsoDataService/Security/ValidateCredentials", todoItemJson);
+            var httpResponseMessage = await _httpClient.PostAsync($@"https://{_tokenAndCookieService.Host}/PsoDataService/Security/ValidateCredentials", todoItemJson);
 
-            var uri = new Uri($@"https://{_host}/PsoDataService/Security/ValidateCredentials");
+            var uri = new Uri($@"https://{_tokenAndCookieService.Host}/PsoDataService/Security/ValidateCredentials");
             List<Cookie> cookies = handler.CookieContainer.GetCookies(uri).Cast<Cookie>().ToList();
             var sbCookie = new StringBuilder();
 
@@ -118,7 +116,7 @@ namespace WebHMIWaveformAPISample.Controllers
             {
                 var httpRequestMessage = new HttpRequestMessage(
                     HttpMethod.Get,
-                    $@"https://{_host}/WebHmi/#HmiApplication/#lib/iec5foverview2etgml")
+                    $@"https://{_tokenAndCookieService.Host}/WebHmi/#Alarms/lib/49101144-a686-4e39-8365-c41f33275986")
                 {
                     Headers =
                     {
@@ -151,5 +149,18 @@ namespace WebHMIWaveformAPISample.Controllers
                 throw;
             }
         }
+
+        [HttpGet]
+        [Route("Login")]
+        public async Task Login(string ip = "10.10.1.225", string user = "admin", string password = "admin")
+        {
+            _tokenAndCookieService.Host=ip;
+            _tokenAndCookieService.User=user;
+            _tokenAndCookieService.Password=password;
+            await GetToken();
+            await GetCookie();
+            await GetToken2();
+        }
+       
     }
 }

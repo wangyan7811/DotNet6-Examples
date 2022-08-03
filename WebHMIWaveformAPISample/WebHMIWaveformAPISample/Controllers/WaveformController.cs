@@ -35,10 +35,6 @@ namespace WebHMIWaveformAPISample.Controllers
         {
             try
             {
-                //_token =
-                //    @"FX257nMQdlmOAaaFg_8ENENWRVns2h79Qqiu8GSKJ7IHHE9AafHmhlZN8zFrEK-UzkXV_AkUEJsMCzF60eiSRjL_1tYptrticEibgzL2Wt01:QomG5DenwcPwZ7x2BhscNiK2eERvTLb2s2cb-hqz4WJ3Dl4UJN_H-BfLhhxhdMiEKDmTv7h5q8bPPZE4rozWB84lgPLNOANSa5FPlM-QdYZNcln1fQqqlaR7gd8_g8E6IRuVBRymOXn-fPEAYzvUNg2";
-                //_cookie = @"forceLogout/WebHmi=false; .APPFRAMEWORK=9CD175595AEEDA23EE857A8FD73B0B8C145951E3FDF92732A14D0D788A0E4E39B5370F63CDF00143A07436E988306AD2BBBD1A320CFC61D31502D75AC4DF7EC8ADC3C362ECF458FE471DA21618418B69EDFECB42851F7708A9FDEA3D07A681EA8276BE06C93E462B34D0D24B87F2DF0EF785A8A3C7013340145FC50D24732024CA9E59385798751502F8A46C55CD70F93FA9135BC7D24BF924AC98BF02146F22BF6183D508B767331282514F05CC1CA3794203B410BDAFC8B6645225D7E79BF03980ABF0577E385A469476B8DFA7498B0E85D648EA8FE2CD5A8849E49810626A; lastApplicationActiveTime/WebHmi=1658907379011";
-
                 var httpRequestMessage = new HttpRequestMessage(
                     HttpMethod.Post,
                     $@"https://{_host}/PsoDataService/AlarmData")
@@ -137,13 +133,6 @@ namespace WebHMIWaveformAPISample.Controllers
         }
 
 
-        [HttpGet]
-        [Route("WebHMILogin")]
-        public async Task WebHMILogin()
-        {
-           var r=await _powerManagerClient.WebLoginAsync();
-        }
-
-
+        
     }
 }
