@@ -14,14 +14,14 @@ namespace WebHMIWaveformAPISample.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly PowerManagerClient _powerManagerClient;
+        //private readonly PowerManagerClient _powerManagerClient;
         private readonly TokenAndCookieService _tokenAndCookieService;
 
         private static HttpClient _httpClient;
         public AuthController(IHttpClientFactory httpClientFactory, PowerManagerClient powerManagerClient, TokenAndCookieService tokenAndCookieService)
         {
             _httpClientFactory = httpClientFactory;
-            _powerManagerClient = powerManagerClient;
+            //_powerManagerClient = powerManagerClient;
             _tokenAndCookieService= tokenAndCookieService;
         }
 

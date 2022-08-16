@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimescaleDBExample", "TimescaleDBExample\TimescaleDBExample.csproj", "{F942C465-2970-43E6-9359-79C8D97EEE47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F942C465-2970-43E6-9359-79C8D97EEE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F942C465-2970-43E6-9359-79C8D97EEE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F942C465-2970-43E6-9359-79C8D97EEE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F942C465-2970-43E6-9359-79C8D97EEE47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EC08D15-8EC0-4307-A84B-06182321564E}
+	EndGlobalSection
+EndGlobal
