@@ -11,3 +11,8 @@ CREATE TABLE tag_history_value (
 ```
 SELECT create_hypertable('tag_history_value','time');
 ```
+
+## package
+dotnet publish -r win10-x64 /p:PublishSingleFile=true  /p:PublishTrimmed=true
+## swagger
+http://172.26.176.171:5001/swagger/index.html

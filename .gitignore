@@ -309,3 +309,4 @@ src/**/inf.yaml
  
  # Ignore dotnet build files
 /src/Services/NBApi.Application/.config/dotnet-tools.json
+TimescaleDBExample/TimescaleDBExample/TimescaleDBExample/bin.zip
